@@ -96,7 +96,7 @@ set cursorline
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
 " 好处：误删什么的，如果以前屏幕打开，可以找回
-set t_ti= t_te=
+" set t_ti= t_te=
 
 
 " 鼠标暂不启用, 键盘党....
@@ -589,8 +589,8 @@ function! AutoSetFileHead()
 
     "如果文件类型为python
     if &filetype == 'python'
-        call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\# encoding: utf-8")
+        " call setline(1, "\#!/usr/bin/env python")
+        call setline(1, "\# encoding: utf-8")
     endif
 
     normal G
@@ -684,5 +684,4 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 
-
-
+let g:pyflakes_use_quickfix = 1
